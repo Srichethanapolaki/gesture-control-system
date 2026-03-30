@@ -1,50 +1,198 @@
 <!DOCTYPE html>
-<html>
+
+
+</html>
+=======
+<html lang="en">
 <head>
-    <title>Gesture Control System</title>
+<meta charset="UTF-8">
+<title>Gesture Control System</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    margin: 20px auto;
+    padding: 25px;
+    width: 75%;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: #444;
+}
+
+/* 🌸 SOFT PREMIUM BUTTON */
+button {
+    padding: 10px 22px;
+    border-radius: 30px;
+    border: none;
+    background: #ffffff;
+    color: #444;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #f3f4f7;
+    transform: translateY(-2px);
+}
+
+video {
+    margin-top: 15px;
+    border-radius: 12px;
+}
+
+/* 🌸 POPUP SECTION INSIDE CARD */
+.popup-section {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #f5f7fa;
+    text-align: left;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.footer {
+    margin-top: 30px;
+    color: #777;
+}
+
+</style>
 </head>
 
-<body style="font-family: Arial; text-align:center; background:#f4f4f4;">
+<body>
 
-    <h1>🖐️ Gesture Control System</h1>
-    <p><b>Control your computer using hand gestures</b></p>
+<div class="container">
 
-    <hr>
+<h1>🖐️ Gesture Control System</h1>
+<p class="subtitle">Control your computer using hand gestures (AI + Computer Vision)</p>
 
-    <h2>🚀 Features</h2>
-    <p>
-        Cursor Movement | Click | Scroll | Volume Control | Exit Gesture
-    </p>
+<div class="card">
+<h2>🚀 Features</h2>
+<p>Cursor • Click • Scroll • Volume • Exit</p>
+</div>
 
-    <h2>🎥 Demo Video</h2>
-    <p>👇 Watch how it works</p>
+<div class="card">
+<h2>🎥 Demo</h2>
+<video width="600" controls>
+    <source src="demo.mp4" type="video/mp4">
+</video>
+</div>
 
-    <!-- Replace with your YouTube video -->
-    <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-        frameborder="0" allowfullscreen>
-    </iframe>
+<div class="card">
+<h2>🧠 Tech Stack</h2>
+<p>Python • OpenCV • MediaPipe • PyAutoGUI</p>
+</div>
 
-    <hr>
+<!-- HOW IT WORKS -->
+<div class="card">
+<h2>⚙️ How It Works</h2>
+<button onclick="toggle('work')">View</button>
 
-    <h2>📂 Download Project</h2>
-    <a href="https://github.com/srichethanapolaki/gesture-control-system">
-        👉 Download from GitHub
-    </a>
+<div id="work" class="popup-section">
+<p>
+The system uses your webcam to detect hand landmarks using MediaPipe.
+Each finger position is converted into gestures.
+These gestures are mapped to actions like cursor movement, clicking, scrolling, and volume control.
+</p>
+</div>
+</div>
 
-    <hr>
+<!-- INSTALLATION -->
+<div class="card">
+<h2>💻 Installation</h2>
+<button onclick="toggle('install')">View</button>
 
-    <h2>⚙️ How to Run</h2>
-    <p>
-        1. Download project<br>
-        2. Install Python<br>
-        3. Install libraries (OpenCV, MediaPipe, PyAutoGUI)<br>
-        4. Run: python hand_test.py
-    </p>
+<div id="install" class="popup-section">
+<p>
+1. Install Python<br> <br>
+2. Install libraries:<br>
+pip install opencv- <br> python mediapipe <br>pyautogui<br><br>
+3. Run the program:<br>
+python hand_test.py
+</p>
+</div>
+</div>
 
-    <hr>
+<!-- HOW TO USE -->
+<div class="card">
+<h2>🖐️ How to Use</h2>
+<button onclick="toggle('use')">View</button>
 
-    <p>👨‍💻 Created by Chethu 🚀</p>
+<div id="use" class="popup-section">
+<p>
+☝️ Index → Move cursor<br>
+✌️ Two fingers → Click<br>
+🤟 Three fingers → Scroll down<br>
+🖖 Four fingers → Scroll up<br>
+👍 + ☝️ → Volume control<br>
+🤙 Ring + Pinky → Exit<br><br>
+
+Keep your hand steady and clearly visible in front of the camera.
+</p>
+</div>
+</div>
+
+<!-- PROJECT -->
+<div class="card">
+<h2>📂 Project</h2>
+<a href="https://github.com/srichethanapolaki/gesture-control-system" target="_blank">
+<button>View GitHub</button>
+</a>
+</div>
+
+<div class="footer">
+✨ Created by Polaki Srichethana
+</div>
+
+</div>
+
+<script>
+function toggle(id) {
+    let section = document.getElementById(id);
+    section.style.display = section.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
+>>>>>>> 8c5e8f4 (Added demo video and updated website UI)
