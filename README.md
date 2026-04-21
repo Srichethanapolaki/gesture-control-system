@@ -2,9 +2,6 @@
 
 🚀 A real-time gesture-based system that allows users to control their computer using hand movements.
 
-🔗 **Live Demo Website:**
-https://srichethanapolaki.github.io/gesture-control-system/
-
 ---
 
 ## 🎯 Features
