@@ -13,7 +13,7 @@ https://srichethanapolaki.github.io/gesture-control-system/
 * ✌️ Click using two-finger gesture
 * 🤟 Scroll up/down using multi-finger gestures
 * 👍 Volume control using finger distance
-* 🤙 Exit using custom gesture
+*  Exit using custom gesture
 
 ---
 
@@ -73,7 +73,7 @@ python hand_test.py
 | 🤟 Three fingers | Scroll Down    |
 | 🖖 Four fingers  | Scroll Up      |
 | 👍 + ☝️          | Volume control |
-| 🤙 Ring + Pinky  | Exit           |
+|  Ring + Pinky  | Exit           |
 
 ---
 
